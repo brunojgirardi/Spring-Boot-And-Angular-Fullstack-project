@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Todo App</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body ng-app="todoApp">
+	<div class="container">
+		<h1 class="text-center">Tarefador</h1>
+		<div class="row" ng-view>
+			
+		</div>
+	</div>
+
+	<script src="assets/js/vendors/jquery.js"></script>
+	<script src="assets/js/vendors/angular/angular.min.js"></script>
+	<script src="assets/js/vendors/angular/angular-route.min.js"></script>
+	<script src="assets/js/vendors/angular/angular-messages.min.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/app.routes.js"></script>
+	<script src="assets/js/TodoCtrl.js"></script>
+</body>
+</html>

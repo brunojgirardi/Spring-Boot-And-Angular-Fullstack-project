@@ -1,0 +1,32 @@
+<div ng-controller='TodoCtrl as vm' class="col-md-6 col-md-offset-3">
+	<div class="header">
+		<span class="title">{{vm.currentTodo.id ? 'Editar Tarefa':'Criar Tarefa' }}</span>
+	</div>
+
+	<form class="login-form" name="todoForm" ng-submit="vm.saveTodo(todoForm.$valid)" novalidate>
+		<div class="form-group"">	
+			<input  type="text" class="form-control" ng-model="vm.currentTodo.title" 
+				name="title" placeholder="Título" required  ng-maxlength="50"/>
+		</div>
+		<div class="form-group"">	
+			<input  type="text" class="form-control" ng-model="vm.currentTodo.content"  ng-maxlength="50" 
+				name="title" placeholder="Descrição" required />
+		</div>
+
+		<div class="task new-task">
+			<input type="checkbox" id="task-new" class="taskItem" value="" ng-model="vm.currentTodo.completed">
+			<label for="task-new"></label>
+			<span class="lead">Tarefa finalizada</span>
+		</div>
+		<div class="add">
+			<div class="row">
+				<div class="col-md-6">
+					<a class="btn btn-block btn-default btn-new" href='#/list'>Ver lista</a>
+				</div>
+				<div class="col-md-6">
+					<input type='submit' value="Salvar" class="btn btn-block btn-info btn-new" ng-disabled='todoForm.$invalid'/>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

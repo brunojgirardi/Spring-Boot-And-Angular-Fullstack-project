@@ -1,0 +1,26 @@
+<div ng-controller='TodoCtrl as vm' class="col-md-6 col-md-offset-3">
+	<div class="header">
+		<span class="title">Lista de Tarefas</span>
+	</div>
+	
+	<div class="task-container"  >
+		
+		<div class="task" ng-repeat='todo in vm.todos track by $index'>
+			<input id="task-{{todo.id}}" type="checkbox" class="taskItem"  ng-model="todo.completed" ng-change='vm.updateStatus($index,todo.completed)'>
+			<label for="task-{{todo.id}}"></label>
+			<span class="lead">{{todo.title}}</span>
+			<span class="delete glyphicon glyphicon-remove-circle" ng-click="vm.deleteTodo(todo.id)"></span>
+			<span class="edit glyphicon glyphicon-pencil" ng-click="vm.openEdit(todo.id)"></span>
+		</div>
+		<div class="task" ng-show="vm.todos.length == 0">
+			<label>
+				<span class="lead">Nenhuma tarefa cadastrada</span>
+			</label>
+		</div>
+
+		<div class="add">
+			<a class="btn btn-block btn-info" href='#/new'>+ Adicionar uma tarefa</a>
+		</div>
+	</div>
+
+</div>
