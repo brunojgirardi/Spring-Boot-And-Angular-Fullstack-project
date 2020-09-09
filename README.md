@@ -1,6 +1,6 @@
 # Todo app
 
-A aplicação é separada entre backend e front-end
+A aplicação é separada entre backend e front-end.
 
 ## Frontend
 Para rodar o backend basta liberar o conteúdo da pasta em algum servidor web. A aplicação considera que o backend está em localhost:8080. No arquivo TodoCtrl.js é possível alterar essa configuração. 
